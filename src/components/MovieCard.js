@@ -1,7 +1,7 @@
 import React from 'react'
 
 function MovieCard({movie}) {
-    const IMAGE_PATH = "https://image.tmdb.org/t/p/w500"
+    const IMAGE_PATH = "https://image.tmdb.org/t/p/w500";
     console.log(movie);
   return (
     

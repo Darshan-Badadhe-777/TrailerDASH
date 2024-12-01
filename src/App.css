@@ -38,3 +38,30 @@ body{
     justify-content: center;
     align-items: center;
   }
+
+  .hero{
+    min-height: 550px;
+    background-position: top center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .hero-title{
+    font-size: 72px;
+    margin: 0;
+  }
+
+  .hero-content{
+    max-width: 70%;
+    padding-bottom: 70px;
+  }
+
+  .button{
+    background-color: #0F1014;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    padding: 10px 15px;
+    cursor: pointer;
+  }

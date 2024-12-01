@@ -4,10 +4,11 @@ import axios from 'axios';
 import MovieCard from './components/MovieCard';
 
 function App() {
-
+  const IMAGE_PATH = "https://image.tmdb.org/t/p/original";
   const API_URL = "https://api.themoviedb.org/3";
   const [movies, setMovies] = useState([]);
   const [searchKey, setSearchKey] = useState("");
+  const [selectedMovie, setSelectedMovie] = useState({});
 
 
   const fetchMovies = async (searchKey) => {
@@ -23,6 +24,7 @@ function App() {
 
     })
 
+    setSelectedMovie(data.results[0])
     setMovies(data.results);
 
   }
@@ -57,13 +59,25 @@ function App() {
       <header className='header'>
         <div className="header-content max-center">
 
-            <h1>Darshan</h1>
+            <span>TrailerDASH</span>
             <form onSubmit={searchMovies}>
              <input type="text" onChange={(e) =>{setSearchKey(e.target.value)}} />
             <button type={"submit"}>Search</button>
             </form>
         </div>
       </header>
+
+      <div className="hero" style={{ backgroundImage: `url('${IMAGE_PATH}${selectedMovie.backdrop_path}')` }}>
+
+          <div className="hero-content max-center"  >
+            <button className={"button"}>Play Trailer</button>
+              <h1 className={"hero-title"}>{selectedMovie.title}</h1>
+              {selectedMovie.overview ? <p className={"hero-overview"}> {selectedMovie.overview}</p> : null}
+          </div>
+
+          
+
+      </div>
  
       
       <div className="container max-center ">

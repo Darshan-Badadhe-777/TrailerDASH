@@ -1,12 +1,40 @@
-.container {
+body{
+  background-color: #090A0E;
+  color: white
+;
+}
+
+.max-center{
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+
+}
+
+.header-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.container {
+  padding: 15px;
+  background-color: #0F1014;
 
   display: grid;
   gap: 15px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-  .movie-cover {
+
+.movie-cover {
   width: 100%;
+  }
+
+  .movie-placeholder{
+    min-height: 359px;
+    background-color: white;
+    color: #0F1014;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }

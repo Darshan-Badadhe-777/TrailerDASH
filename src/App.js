@@ -41,6 +41,7 @@ function App() {
       <MovieCard 
        key={movie.id}
        movie={movie}
+       selectMovie={setSelectedMovie}
       
       />
     ))
